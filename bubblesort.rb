@@ -27,7 +27,7 @@ end
 begin
 
 testa = [3,2,1,6,9,1,2,4,6,5,3,10,1,2]
-testb = ["hi","hello","hey","ko","have","a","day"]
+testb = %w[hello hey hi] 
 puts bubble_sort(testa);
 bubble_sort_by(testb) do |left,right|
   left.length - right.length
