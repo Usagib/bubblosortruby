@@ -1,11 +1,16 @@
 def bubble_sort (arr)
-  arr.each_with_index do |value,key|
-    if value > arr[key.next]
-      value,arr[key.next] = arr[key.next],value
+  arr.each do |x|
+    arr.each_with_index do |value,key|
+      if key != (arr.length()-1)
+        if value > arr[key+1]
+          arr[key],arr[key+1] = arr[key+1],arr[key]
+        end
+      end
     end
   end
-  return arr
+  puts arr
 end
+
 begin
-puts bubble_sort([2,6,8,3,5,9,12,1,3,2]);
+puts bubble_sort([3,2,1]);
 end
