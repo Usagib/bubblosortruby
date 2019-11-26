@@ -1,7 +1,7 @@
 def bubble_sort (arr)
-  arr.each do |x|
+  arr.each do
     arr.each_with_index do |value,key|
-      if key != (arr.length()-1)
+      if key != (arr.length -1)
         if value > arr[key+1]
           arr[key],arr[key+1] = arr[key+1],arr[key]
         end
